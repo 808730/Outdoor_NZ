@@ -55,3 +55,22 @@ li:hover {background-color: white;}
 			margin-right: auto;
 			font-size: 10px;
 		}
+		
+		/*** PhoneGap Patches ***/
+
+a[data-role="button"] {
+    text-decoration:none;
+}
+
+
+
+/*** FOR THE MAP PAGE ***/
+
+/* lie about the width & height just so the map can initialize, resizeMapIfVisible() fixes this later */
+#page-map div[data-role="content"] {
+    padding:0;
+}
+#map_canvas {
+    height:300px;
+    width:100%;
+}
